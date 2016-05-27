@@ -1,0 +1,15 @@
+<h1>My Trips</h1>
+<%= link_to 'Start an Adventure', new_trip_path %>
+<br />
+<% if @trips.any? %>
+<ul>
+	<% @trips.each do |trip| %>
+	<li>
+		<%= link_to trip.name, trip_path(trip) %>
+	</li>
+	<% end %>
+</ul>	
+<% else %>
+ 	<h3>you bummer you have no trips planned yet!</h3>
+<% end %>
+

@@ -1,0 +1,9 @@
+<h1>Yay! All set for your vacation to <%= @trip.name%></h1>
+<hr/>
+
+<h2>Your distance is <%= @trip.distance %> miles, on <%= @trip.date %></h2>
+
+<%= link_to 'All your trips', trips_path %>
+<%= link_to "Edit", edit_trip_path(@trip)%>
+<%= link_to "Delete", trip_path(@trip), method: :delete%>
+<%= link_to 'Add Location', trip_locations_path(@trip.id, @trip) %>

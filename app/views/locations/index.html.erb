@@ -1,0 +1,15 @@
+<h1>Your Locations</h1>
+<%=link_to 'Enter location', new_trip_location_path(@trip) %>
+<hr/>
+ 
+ <% if @locations.any? %>
+ <ul>
+ 	<% @locations.each do |location|%> 
+ 		<li>
+ 			<%= link_to location.name, trip_location_path(@trip, location) %>
+ 		</li>
+ 	<%end%>
+ </ul>
+ <%else%>
+ 	<h3>No location has been created yet!</h3>
+ <%end%>
