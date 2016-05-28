@@ -1,0 +1,31 @@
+<h1>Address</h1>
+
+<h3>
+
+    <span>Street:</span>
+	<span><%= @address.street %></span>
+	<br/>
+
+	<span>City:</span>
+	<span><%= @address.city %></span>
+	<br/>
+
+	<span>State:</span>
+	<span><%= @address.state %></span>
+	<br/>
+
+	<span>Zip:</span>
+	<span><%= @address.zip %></span>
+	<br/>
+
+	<span>Country:</span>
+	<span><%= @address.country %></span>
+	
+</h3>
+
+<%= link_to "Edit", edit_address_path(@address) %>
+
+<%= link_to "Trips",trips_path %>
+
+
+

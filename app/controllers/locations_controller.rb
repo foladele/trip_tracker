@@ -21,7 +21,8 @@ class LocationsController < ApplicationController
   	@trip = Trip.find(params[:trip_id])
   	@location = @trip.locations.find(params[:id])
 
-  	if @location.update(trip_id: @trip.id)
+  	# if @location.update(trip_id: @trip.id)
+    if @location.update(location_params)
   		redirect_to trip_location_path(@trip, @location)
   	else
         render :edit
